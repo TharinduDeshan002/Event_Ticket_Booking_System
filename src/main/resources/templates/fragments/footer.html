@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer class="mt-24 border-t border-white/10" th:fragment="footer">
+    <div class="container mx-auto px-4 py-14 grid gap-10 md:grid-cols-4">
+        <div>
+            <a class="flex items-center gap-2" th:href="@{/}">
+                <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary shadow-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket h-4 w-4 text-primary-foreground" aria-hidden="true">
+                        <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+                        <path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path>
+                    </svg>
+                </span>
+                <span class="font-display text-lg font-semibold">Even<span class="text-gradient">tly</span></span>
+            </a>
+            <p class="mt-3 text-sm text-muted-foreground max-w-xs">Book unforgettable experiences. Concerts, conferences, sports and more — all in one place.</p>
+        </div>
+        <div>
+            <h4 class="text-sm font-semibold mb-3">Explore</h4>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+                <li><a th:href="@{/events}" class="hover:text-foreground">All events</a></li>
+                <li><a th:href="@{/dashboard}" class="hover:text-foreground">My bookings</a></li>
+                <li><a th:href="@{/admin}" class="hover:text-foreground">Organizer portal</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-sm font-semibold mb-3">Contact</h4>
+            <ul class="space-y-2 text-sm text-muted-foreground">
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-4 w-4" aria-hidden="true">
+                        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    </svg> support@evently.app
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4" aria-hidden="true">
+                        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                    </svg> +91 90000 12345
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4" aria-hidden="true">
+                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle>
+                    </svg> Bengaluru, IN
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-sm font-semibold mb-3">Follow</h4>
+            <div class="flex gap-2">
+                <a href="#" class="grid h-9 w-9 place-items-center rounded-lg glass hover:bg-white/10 transition-smooth" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram h-4 w-4" aria-hidden="true">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#" class="grid h-9 w-9 place-items-center rounded-lg glass hover:bg-white/10 transition-smooth" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter h-4 w-4" aria-hidden="true">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                    </svg>
+                </a>
+                <a href="#" class="grid h-9 w-9 place-items-center rounded-lg glass hover:bg-white/10 transition-smooth" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook h-4 w-4" aria-hidden="true">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="border-t border-white/10 py-5 text-center text-xs text-muted-foreground">© 2026 Evently. Built for a university Java project.</div>
+</footer>
+</body>
+</html>
