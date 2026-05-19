@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="header" th:replace="~{fragments/layout :: header}"></header>
+<main class="container page-main">
+    <a class="back-link" th:href="@{/}">&larr; Back to Home</a>
+    <h2>My Bookings</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Booking ID</th>
+            <th>Event</th>
+            <th>Tickets</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="5" style="text-align: center; color: #888;">No bookings loaded yet — connect BookingService to bookings.txt</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

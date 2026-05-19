@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="header" th:replace="~{fragments/layout :: header}"></header>
+<main class="container page-main">
+    <a class="back-link" th:href="@{/}">&larr; Back to Home</a>
+    <h2>Book Tickets</h2>
+    <form>
+        <div class="form-group">
+            <label for="eventId">Event</label>
+            <select id="eventId" name="eventId">
+                <option value="">Select an event</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ticketCount">Number of Tickets</label>
+            <input type="number" id="ticketCount" name="ticketCount" min="1" value="1">
+        </div>
+        <button type="submit" class="btn">Book Now</button>
+    </form>
+    <p class="placeholder-msg">Form UI ready — connect to BookingService to save to bookings.txt.</p>
+</main>
+</body>
+</html>

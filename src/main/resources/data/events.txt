@@ -1,0 +1,4 @@
+# Format: eventId|title|venue|date|time|price|availableTickets
+E001|Rock Concert|City Hall|2026-06-15|19:00|2500.00|100
+E002|Tech Summit|Convention Center|2026-07-20|09:00|1500.00|50
+E003|Drama Play|Open Air Theater|2026-08-05|18:30|800.00|75

@@ -1,0 +1,5 @@
+# Format: userId|name|email|password|role
+# role: USER or ADMIN
+U001|John Doe|john@email.com|pass123|USER
+U002|Jane Smith|jane@email.com|pass456|USER
+A001|System Admin|admin@email.com|admin123|ADMIN

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket Booking System</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1>Event Ticket Booking System</h1>
+        <p class="subtitle">SE1020 — Object Oriented Programming Project</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>Welcome</h2>
+        <p>Book tickets for concerts, conferences, and shows. Manage events and users with file-based storage.</p>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <h3>User Management</h3>
+            <ul>
+                <li><a th:href="@{/users/register}">Register</a></li>
+                <li><a th:href="@{/users/login}">Login</a></li>
+                <li><a th:href="@{/users/profile}">View Profile</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Event Management</h3>
+            <ul>
+                <li><a th:href="@{/events}">View All Events</a></li>
+                <li><a th:href="@{/events/add}">Add Event</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Ticket Booking</h3>
+            <ul>
+                <li><a th:href="@{/bookings/book}">Book Tickets</a></li>
+                <li><a th:href="@{/bookings}">View Bookings</a></li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Event Ticket Booking System</p>
+    </div>
+</footer>
+
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

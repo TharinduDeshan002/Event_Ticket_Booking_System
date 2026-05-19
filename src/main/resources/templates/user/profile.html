@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="header" th:replace="~{fragments/layout :: header}"></header>
+<main class="container page-main">
+    <a class="back-link" th:href="@{/}">&larr; Back to Home</a>
+    <h2>User Profile</h2>
+    <table>
+        <tr><th>User ID</th><td>—</td></tr>
+        <tr><th>Name</th><td>—</td></tr>
+        <tr><th>Email</th><td>—</td></tr>
+        <tr><th>Role</th><td>—</td></tr>
+    </table>
+    <p class="placeholder-msg">Profile data will appear here after login is implemented.</p>
+</main>
+</body>
+</html>
