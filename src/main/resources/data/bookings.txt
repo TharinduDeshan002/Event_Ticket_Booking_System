@@ -1,4 +1,9 @@
-# Format: bookingId|userId|eventId|ticketCount|totalPrice|status|bookingDate
-B001|U001|E001|2|5000.00|CONFIRMED|2026-05-10
-B002|U002|E002|1|1500.00|CONFIRMED|2026-05-12
-B003|U001|E003|3|2400.00|CANCELLED|2026-05-14
+# FORMAT: bookingId|userId|eventId|customerName|customerEmail|ticketCount|unitPriceUSD|totalPriceUSD|status|bookingDate
+B001|U001|E001|James Mitchell|james.mitchell@email.com|2|549.00|1098.00|CONFIRMED|2026-05-10
+B002|U002|E009|Sarah Chen|sarah.chen@email.com|1|450.00|450.00|CONFIRMED|2026-05-12
+B003|U001|E012|James Mitchell|james.mitchell@email.com|3|65.00|195.00|CANCELLED|2026-05-14
+B004|U002|E010|Sarah Chen|sarah.chen@email.com|2|389.00|778.00|CONFIRMED|2026-05-15
+B005|U001|E008|James Mitchell|james.mitchell@email.com|1|329.00|329.00|CONFIRMED|2026-05-16
+B006|U003|E004|Carlos Rivera|carlos.rivera@email.com|4|199.00|796.00|CONFIRMED|2026-05-17
+B007|U004|E016|Emma Wilson|emma.wilson@email.com|1|350.00|350.00|PENDING|2026-05-18
+B008|U005|E002|Deshan Dias|deshan24@gmail.com|1|125.00|125.00|CANCELLED|2026-05-20

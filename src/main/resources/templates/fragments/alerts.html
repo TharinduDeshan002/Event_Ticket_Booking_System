@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="alerts" class="container mx-auto px-4 pt-4" th:if="${success != null or error != null}">
+    <p th:if="${success}" class="rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200"
+       th:text="${success}">Success</p>
+    <p th:if="${error}" class="mt-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+       th:text="${error}">Error</p>
+</div>
+</body>
+</html>

@@ -1,11 +1,39 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Event</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-</head>
+<head th:replace="~{fragments/head :: head('Edit Event - Evently')}"></head>
 <body>
-    <!-- Update event details form -->
+<div class="min-h-screen flex flex-col">
+<header th:replace="~{fragments/admin-header :: adminHeader('events')}"></header>
+<div th:replace="~{fragments/alerts :: alerts}"></div>
+<main class="flex-1 container mx-auto px-4 py-12 max-w-xl">
+<h1 class="font-display text-3xl font-semibold">Edit event</h1>
+<form th:action="@{/events/edit}" method="post" class="mt-6 glass-strong rounded-2xl p-6 space-y-3">
+<input type="hidden" name="id" th:value="${event.id}"/>
+<input type="text" name="title" th:value="${event.title}" required class="w-full h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+<select name="category" class="w-full h-11 px-3 rounded-md bg-white/5 border border-white/10">
+<option value="Music" th:selected="${event.category == 'Music'}">Music</option>
+<option value="Sports" th:selected="${event.category == 'Sports'}">Sports</option>
+<option value="Tech" th:selected="${event.category == 'Tech'}">Tech</option>
+<option value="Arts" th:selected="${event.category == 'Arts'}">Arts</option>
+<option value="Festival" th:selected="${event.category == 'Festival'}">Festival</option>
+</select>
+<input type="text" name="venue" th:value="${event.venue}" required class="w-full h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+<input type="text" name="city" th:value="${event.city}" required class="w-full h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+<input type="text" name="country" th:value="${event.country}" required class="w-full h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+<div class="grid grid-cols-2 gap-3">
+<input type="date" name="date" th:value="${event.date}" required class="h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+<input type="time" name="time" th:value="${event.time}" required class="h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<input type="number" name="price" th:value="${event.price}" step="0.01" min="0" required class="h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+<input type="number" name="availableTickets" th:value="${event.availableTickets}" min="0" required class="h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+</div>
+<input type="text" name="image" th:value="${event.image}" placeholder="Image filename" class="w-full h-11 px-3 rounded-md bg-white/5 border border-white/10"/>
+<button type="submit" class="w-full h-10 rounded-md bg-gradient-primary text-primary-foreground font-medium">Update event</button>
+</form>
+<a th:href="@{/admin/dashboard}" class="inline-block mt-4 text-sm text-primary-glow hover:underline">&larr; Admin dashboard</a>
+</main>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+</div>
 </body>
 </html>

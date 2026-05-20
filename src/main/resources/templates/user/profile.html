@@ -1,23 +1,28 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-</head>
+<head th:replace="~{fragments/head :: head('Profile - Evently')}"></head>
 <body>
-<header class="header" th:replace="~{fragments/layout :: header}"></header>
-<main class="container page-main">
-    <a class="back-link" th:href="@{/}">&larr; Back to Home</a>
-    <h2>User Profile</h2>
-    <table>
-        <tr><th>User ID</th><td>â€”</td></tr>
-        <tr><th>Name</th><td>â€”</td></tr>
-        <tr><th>Email</th><td>â€”</td></tr>
-        <tr><th>Role</th><td>â€”</td></tr>
-    </table>
-    <p class="placeholder-msg">Profile data will appear here after login is implemented.</p>
+<div class="min-h-screen flex flex-col">
+<header th:replace="~{fragments/header :: header('dashboard')}"></header>
+<div th:replace="~{fragments/alerts :: alerts}"></div>
+<main class="flex-1 container mx-auto px-4 py-12 max-w-lg">
+<h1 class="font-display text-3xl font-semibold">Edit profile</h1>
+<p class="text-muted-foreground text-sm mt-1">Updates users.txt</p>
+<form th:action="@{/users/profile}" method="post" class="mt-8 glass-strong rounded-2xl p-6 space-y-4">
+<label class="block text-sm">Full name
+<input type="text" name="fullName" th:value="${user.fullName}" required class="w-full mt-1 h-11 px-3 rounded-md bg-white/5 border border-white/10"/></label>
+<label class="block text-sm">Phone
+<input type="tel" name="phone" th:value="${user.phone}" class="w-full mt-1 h-11 px-3 rounded-md bg-white/5 border border-white/10"/></label>
+<label class="block text-sm">City
+<input type="text" name="city" th:value="${user.city}" class="w-full mt-1 h-11 px-3 rounded-md bg-white/5 border border-white/10"/></label>
+<label class="block text-sm">Country
+<input type="text" name="country" th:value="${user.country}" class="w-full mt-1 h-11 px-3 rounded-md bg-white/5 border border-white/10"/></label>
+<p class="text-xs text-muted-foreground">Email: <span th:text="${user.email}">email</span> (cannot change)</p>
+<button type="submit" class="w-full h-10 rounded-md bg-gradient-primary text-primary-foreground font-medium">Save profile</button>
+</form>
+<a th:href="@{/dashboard}" class="inline-block mt-4 text-sm text-primary-glow hover:underline">&larr; Back to dashboard</a>
 </main>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+</div>
 </body>
 </html>

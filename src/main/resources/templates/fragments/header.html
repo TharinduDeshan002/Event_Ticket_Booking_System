@@ -20,8 +20,7 @@
                    th:classappend="${active == 'events'} ? ' text-foreground bg-white/10' : ' text-muted-foreground hover:text-foreground hover:bg-white/5'">Events</a>
                 <a th:href="@{/dashboard}" class="rounded-lg px-3 py-2 text-sm font-medium transition-smooth"
                    th:classappend="${active == 'dashboard'} ? ' text-foreground bg-white/10' : ' text-muted-foreground hover:text-foreground hover:bg-white/5'">My Bookings</a>
-                <a th:href="@{/admin}" class="rounded-lg px-3 py-2 text-sm font-medium transition-smooth"
-                   th:classappend="${active == 'admin'} ? ' text-foreground bg-white/10' : ' text-muted-foreground hover:text-foreground hover:bg-white/5'">Admin</a>
+                <a th:href="@{/admin/login}" class="rounded-lg px-3 py-2 text-sm font-medium transition-smooth text-muted-foreground hover:text-foreground hover:bg-white/5">Admin Portal</a>
             </nav>
             <div class="hidden md:flex items-center gap-2">
                 <a th:href="@{/users/login}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring glass text-foreground hover:bg-white/10 transition-smooth h-8 rounded-md px-3 text-xs">Login</a>
@@ -40,8 +39,7 @@
                th:classappend="${active == 'events'} ? ' text-foreground bg-white/10' : ' text-muted-foreground hover:text-foreground hover:bg-white/5'">Events</a>
             <a th:href="@{/dashboard}" class="rounded-lg px-3 py-2 text-sm font-medium transition-smooth"
                th:classappend="${active == 'dashboard'} ? ' text-foreground bg-white/10' : ' text-muted-foreground hover:text-foreground hover:bg-white/5'">My Bookings</a>
-            <a th:href="@{/admin}" class="rounded-lg px-3 py-2 text-sm font-medium transition-smooth"
-               th:classappend="${active == 'admin'} ? ' text-foreground bg-white/10' : ' text-muted-foreground hover:text-foreground hover:bg-white/5'">Admin</a>
+            <a th:href="@{/admin/login}" class="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-white/5">Admin Portal</a>
             <a th:href="@{/users/login}" class="rounded-lg px-3 py-2 text-sm font-medium glass">Login</a>
             <a th:href="@{/users/register}" class="rounded-lg px-3 py-2 text-sm font-medium bg-gradient-primary text-primary-foreground text-center">Register</a>
         </nav>

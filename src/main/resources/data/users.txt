@@ -1,5 +1,6 @@
-# Format: userId|name|email|password|role
-# role: USER or ADMIN
-U001|John Doe|john@email.com|pass123|USER
-U002|Jane Smith|jane@email.com|pass456|USER
-A001|System Admin|admin@email.com|admin123|ADMIN
+# FORMAT: userId|fullName|email|phone|password|role|city|country|registeredDate
+U001|James Mitchell|james.mitchell@email.com|+1-312-555-0142|pass123|USER|Chicago|United States|2025-09-01
+U002|Sarah Chen|sarah.chen@email.com|+44-20-7946-0958|pass456|USER|London|United Kingdom|2025-10-15
+U003|Carlos Rivera|carlos.rivera@email.com|+55-21-5555-0198|pass789|USER|Rio de Janeiro|Brazil|2026-01-20
+U004|Emma Wilson|emma.wilson@email.com|+61-2-9374-4000|pass321|USER|Sydney|Australia|2026-02-08
+U005|Deshan Dias|deshan24@gmail.com|0717915534|Deshan|USER|Kandy|Sri Lanka|2026-05-20

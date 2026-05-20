@@ -1,0 +1,2 @@
+# FORMAT: adminId|username|password|fullName|email
+A001|evently_admin|Evently@Admin2026|Evently Administrator|admin@evently.com

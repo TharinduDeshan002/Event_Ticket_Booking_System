@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head('Admin Portal - Evently')}"></head>
+<body>
+<div class="min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 glass-strong border-b border-white/10">
+<div class="container mx-auto flex h-16 items-center justify-between px-4">
+<a th:href="@{/}" class="font-display text-lg font-semibold">Even<span class="text-gradient">tly</span></a>
+<span class="text-xs rounded-full glass px-3 py-1 text-muted-foreground">Admin Portal</span>
+</div>
+</header>
+<div th:replace="~{fragments/alerts :: alerts}"></div>
+<main class="flex-1 grid place-items-center px-4 py-16">
+<div class="relative w-full max-w-md">
+<div class="absolute -inset-6 bg-gradient-aurora opacity-20 blur-3xl rounded-3xl"></div>
+<div class="relative glass-strong rounded-3xl p-8 shadow-elegant border border-amber-500/20">
+<div class="text-center">
+<span class="inline-block rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-200 mb-4">Staff only</span>
+<h1 class="font-display text-2xl font-semibold">Admin sign in</h1>
+<p class="text-sm text-muted-foreground mt-1">Separate from customer login</p>
+</div>
+<form th:action="@{/admin/login}" method="post" class="mt-8 space-y-4">
+<label class="block"><span class="text-sm font-medium">Username</span>
+<input type="text" name="username" required autocomplete="username"
+       class="flex w-full rounded-md border mt-1.5 h-11 px-3 bg-white/5 border-white/10 md:text-sm"/></label>
+<label class="block"><span class="text-sm font-medium">Password</span>
+<input type="password" name="password" required autocomplete="current-password"
+       class="flex w-full rounded-md border mt-1.5 h-11 px-3 bg-white/5 border-white/10 md:text-sm"/></label>
+<button type="submit" class="w-full h-10 rounded-md bg-gradient-primary text-primary-foreground font-medium shadow-glow">Sign in to admin</button>
+</form>
+<p class="mt-6 text-center text-xs text-muted-foreground">
+<a th:href="@{/}" class="hover:underline">← Back to public site</a>
+</p>
+</div>
+</div>
+</main>
+</div>
+</body>
+</html>
