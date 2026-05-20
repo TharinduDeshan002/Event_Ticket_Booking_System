@@ -7,3 +7,4 @@ B005|U001|E008|James Mitchell|james.mitchell@email.com|1|329.00|329.00|CONFIRMED
 B006|U003|E004|Carlos Rivera|carlos.rivera@email.com|4|199.00|796.00|CONFIRMED|2026-05-17
 B007|U004|E016|Emma Wilson|emma.wilson@email.com|1|350.00|350.00|PENDING|2026-05-18
 B008|U005|E002|Deshan Dias|deshan24@gmail.com|1|125.00|125.00|CANCELLED|2026-05-20
+B009|U005|E005|Deshan Dias|deshan24@gmail.com|2|175.00|350.00|CONFIRMED|2026-05-20

@@ -3,7 +3,7 @@ E001|Coachella Valley Music and Arts Festival|Music|Empire Polo Club|Indio|Unite
 E002|Wimbledon Championships|Sports|All England Lawn Tennis Club|London|United Kingdom|2026-07-01|13:00|125.00|42000|event-sports.jpg
 E003|San Diego Comic-Con International|Entertainment|San Diego Convention Center|San Diego|United States|2026-07-23|10:00|89.00|130000|hero-concert.jpg
 E004|Rio Carnival Samba Parade|Culture|Sambadrome Marques de Sapucai|Rio de Janeiro|Brazil|2026-02-14|21:00|199.00|72000|hero-concert.jpg
-E005|Sydney New Year's Eve Harbour Concert|Music|Sydney Opera House Forecourt|Sydney|Australia|2025-12-31|20:30|175.00|35000|event-music.jpg
+E005|Sydney New Year's Eve Harbour Concert|Music|Sydney Opera House Forecourt|Sydney|Australia|2025-12-31|20:30|175.00|34998|event-music.jpg
 E006|Oktoberfest Opening Ceremony|Culture|Theresienwiese|Munich|Germany|2026-09-19|11:00|45.00|100000|hero-concert.jpg
 E007|GITEX Global Technology Week|Tech|Dubai World Trade Centre|Dubai|United Arab Emirates|2026-10-13|09:00|299.00|180000|event-tech.jpg
 E008|Hamilton on Broadway|Theatre|Richard Rodgers Theatre|New York|United States|2026-06-01|19:00|329.00|1319|hero-concert.jpg
@@ -15,3 +15,4 @@ E013|Montreux Jazz Festival|Music|Montreux Music and Convention Centre|Montreux|
 E014|Edinburgh Festival Fringe|Theatre|Royal Mile|Edinburgh|United Kingdom|2026-08-07|14:00|55.00|500000|hero-concert.jpg
 E015|Burning Man|Culture|Black Rock Desert|Black Rock City|United States|2026-08-30|00:01|575.00|70000|hero-concert.jpg
 E016|CES Las Vegas|Tech|Las Vegas Convention Center|Las Vegas|United States|2026-01-06|08:00|350.00|180000|event-tech.jpg
+E017|Naadagama|Music|Sahas Uyana|Kandy|Sri Lanka|2026-05-31|19:00|50.00|1|event-music.jpg

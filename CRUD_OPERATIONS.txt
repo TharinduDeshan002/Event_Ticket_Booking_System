@@ -1,0 +1,66 @@
+================================================================================
+5. CRUD OPERATIONS — Event Ticket Booking System (Evently)
+================================================================================
+Text-file database (pipe-separated). Each module maps to one data file.
+
+--------------------------------------------------------------------------------
+Module              | Create                    | Read                         | Update / Delete
+--------------------------------------------------------------------------------
+User Management     | Register new user         | Login; view profile;         | Update profile (name,
+(users.txt)         | (POST /users/register)  | admin views all users        | phone, city, country);
+                    | → saves to users.txt      | (GET /admin/dashboard)       | admin delete user
+                    |                           |                              | (POST /admin/users/delete)
+--------------------------------------------------------------------------------
+Event Management    | Add new event             | List all events; filter by   | Edit event details
+(events.txt)        | (POST /events/add)        | category; view on home page  | (POST /events/edit);
+                    | → saves to events.txt     | (GET /, GET /events)         | delete event
+                    | Admin only                |                              | (POST /events/delete)
+--------------------------------------------------------------------------------
+Booking Management  | Create booking            | View/search own bookings     | Cancel booking
+(bookings.txt)      | (POST /bookings/book)     | (GET /dashboard); admin sees | (POST /bookings/cancel)
+                    | → saves to bookings.txt   | all bookings on dashboard    | → status CANCELLED;
+                    | Logged-in user            |                              | restores event tickets
+--------------------------------------------------------------------------------
+
+================================================================================
+DATA FILES & FORM FIELDS
+================================================================================
+
+1) users.txt
+   Format: userId|fullName|email|phone|password|role|city|country|registeredDate
+   Create:  fullName, email, phone, password, city, country
+   Read:    email + password (login); profile by session
+   Update:  fullName, phone, city, country
+   Delete:  admin deletes by userId
+
+2) events.txt
+   Format: eventId|title|category|venue|city|country|date|time|priceUSD|availableTickets|image
+   Create:  title, category, venue, city, country, date, time, price, availableTickets, image (optional)
+   Read:    list, filter by category, find by eventId
+   Update:  all fields via edit form
+   Delete:  admin deletes by eventId
+
+3) bookings.txt
+   Format: bookingId|userId|eventId|customerName|customerEmail|ticketCount|unitPriceUSD|totalPriceUSD|status|bookingDate
+   Create:  eventId, customerName, customerEmail, ticketCount (user must be logged in)
+   Read:    bookings for logged-in user on dashboard; admin sees all
+   Update:  cancel → status set to CANCELLED; ticket count returned to event
+
+================================================================================
+URLS (PUBLIC vs ADMIN)
+================================================================================
+
+PUBLIC (users)
+  Create user:     http://localhost:8080/users/register
+  Read (login):    http://localhost:8080/users/login
+  Update profile:  http://localhost:8080/users/profile
+  Read bookings:   http://localhost:8080/dashboard
+  Create booking:  http://localhost:8080/bookings/book?eventId=E001
+
+ADMIN (separate — not on public navbar)
+  Login:           http://localhost:8080/admin/login
+  Dashboard:       http://localhost:8080/admin/dashboard
+  Credentials:     username evently_admin / password Evently@Admin2026
+                   (stored in admins.txt, not users.txt)
+
+================================================================================
